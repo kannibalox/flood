@@ -52,13 +52,13 @@ export const methodCallJSON = (options: net.NetConnectOpts, methodName: string, 
       methodName == 'system.multicall'
         ? (params[0] as MultiMethodCalls).map((call) => ({
             jsonrpc: '2.0',
-            id: null,
+            id: '1',
             method: call.methodName,
             params: call.params,
           }))
         : {
             jsonrpc: '2.0',
-            id: null,
+            id: '1',
             method: methodName,
             params,
           };
